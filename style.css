@@ -1,0 +1,693 @@
+/* ==========================================
+   RESET
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+html{
+    scroll-behavior:smooth;
+}
+
+
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#080817;
+
+    color:white;
+
+    overflow-x:hidden;
+
+    -webkit-tap-highlight-color:transparent;
+
+}
+
+
+
+/* ==========================================
+   FONDO
+========================================== */
+
+
+.background{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:-10;
+
+
+    background:
+
+    radial-gradient(
+        circle at top,
+        #641d4d,
+        #080817 70%
+    );
+
+}
+
+
+
+.background::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+
+    background:
+
+    radial-gradient(
+        circle,
+        rgba(255,159,198,.18),
+        transparent 60%
+    );
+
+}
+
+
+
+/* ==========================================
+   CORAZONES
+========================================== */
+
+
+#corazones{
+
+    position:fixed;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+    z-index:20;
+
+}
+
+
+
+.corazon{
+
+    position:absolute;
+
+    bottom:-50px;
+
+    animation:
+
+    subir 10s linear forwards;
+
+    opacity:.35;
+
+}
+
+
+
+@keyframes subir{
+
+
+0%{
+
+transform:
+translateY(0)
+scale(1);
+
+}
+
+
+
+100%{
+
+transform:
+translateY(-120vh)
+scale(1.8);
+
+
+opacity:0;
+
+}
+
+
+}
+
+
+
+
+
+
+
+/* ==========================================
+   SECCIONES
+========================================== */
+
+
+section{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:40px 20px;
+
+    text-align:center;
+
+}
+
+
+
+.oculto{
+
+    display:none;
+
+}
+
+
+
+
+
+
+
+
+/* ==========================================
+   PORTADA
+========================================== */
+
+
+.contenido{
+
+    max-width:900px;
+
+    width:100%;
+
+}
+
+
+
+.subtitulo{
+
+
+    color:#ffd0e3;
+
+
+    font-size:18px;
+
+
+    letter-spacing:5px;
+
+
+    text-transform:uppercase;
+
+
+    margin-bottom:30px;
+
+
+}
+
+
+
+h1{
+
+
+    font-family:'Great Vibes',cursive;
+
+
+    font-size:clamp(60px,10vw,110px);
+
+
+    color:#ff82b5;
+
+
+    text-shadow:
+
+
+    0 0 40px rgba(255,130,181,.7);
+
+
+}
+
+
+
+
+
+.frase{
+
+
+    margin-top:35px;
+
+
+    font-size:clamp(18px,3vw,26px);
+
+
+    line-height:1.8;
+
+
+    color:#ffeaf3;
+
+
+}
+
+
+
+
+
+
+
+
+/* ==========================================
+   TARJETAS
+========================================== */
+
+
+.tarjeta{
+
+
+    width:min(850px,95%);
+
+
+    padding:clamp(30px,5vw,60px);
+
+
+    background:
+
+    rgba(255,255,255,.09);
+
+
+    backdrop-filter:blur(20px);
+
+
+    border-radius:35px;
+
+
+    border:
+
+    1px solid rgba(255,255,255,.18);
+
+
+    box-shadow:
+
+
+    0 30px 90px rgba(0,0,0,.55);
+
+
+    animation:
+
+    aparecer .8s ease;
+
+
+}
+
+
+
+
+.tarjeta h2{
+
+
+    font-family:'Great Vibes',cursive;
+
+
+    color:#ffb6d5;
+
+
+    font-size:clamp(45px,8vw,75px);
+
+
+    margin-bottom:35px;
+
+
+}
+
+
+
+
+.tarjeta p{
+
+
+    font-size:clamp(17px,3vw,23px);
+
+
+    line-height:1.9;
+
+
+    margin-bottom:20px;
+
+
+    color:#fff1f7;
+
+
+}
+
+
+
+
+
+
+
+/* ==========================================
+   BOTONES
+========================================== */
+
+
+button,
+#ubicacion{
+
+
+    margin-top:35px;
+
+
+    display:inline-block;
+
+
+    padding:18px 45px;
+
+
+    border-radius:50px;
+
+
+    border:none;
+
+
+    cursor:pointer;
+
+
+    color:white;
+
+
+    text-decoration:none;
+
+
+    font-size:18px;
+
+
+    background:
+
+
+    linear-gradient(
+        135deg,
+        #ff4d94,
+        #ff9fc6
+    );
+
+
+    box-shadow:
+
+
+    0 0 35px rgba(255,77,148,.5);
+
+
+    transition:.35s;
+
+
+}
+
+
+
+button:hover,
+#ubicacion:hover{
+
+
+    transform:translateY(-5px);
+
+
+    box-shadow:
+
+
+    0 0 60px rgba(255,77,148,.8);
+
+
+}
+
+
+
+button:active{
+
+    transform:scale(.95);
+
+}
+
+
+
+
+
+
+
+/* ==========================================
+   HISTORIA
+========================================== */
+
+
+#recuerdo{
+
+    width:100%;
+
+    max-width:900px;
+
+}
+
+
+
+#contadorRecuerdos{
+
+
+    color:#ffb6d5;
+
+
+    font-size:18px;
+
+
+    margin-bottom:25px;
+
+
+}
+
+
+
+
+#foto{
+
+
+    width:min(700px,92vw);
+
+
+    max-height:70vh;
+
+
+    object-fit:contain;
+
+
+    border-radius:30px;
+
+
+    box-shadow:
+
+
+    0 30px 90px rgba(0,0,0,.7);
+
+
+    transition:.5s;
+
+
+}
+
+
+
+
+
+
+#tituloFoto{
+
+
+    font-family:'Great Vibes',cursive;
+
+
+    color:#ffb6d5;
+
+
+    font-size:clamp(45px,8vw,75px);
+
+
+    margin-top:40px;
+
+
+}
+
+
+
+
+#textoFoto{
+
+
+    max-width:750px;
+
+
+    margin:25px auto;
+
+
+    font-size:clamp(18px,3vw,25px);
+
+
+    line-height:1.8;
+
+
+}
+
+
+
+
+
+
+
+/* ==========================================
+   ANIMACIONES
+========================================== */
+
+
+@keyframes aparecer{
+
+
+from{
+
+opacity:0;
+
+transform:
+translateY(30px)
+scale(.95);
+
+}
+
+
+
+to{
+
+opacity:1;
+
+transform:
+translateY(0)
+scale(1);
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+/* ==========================================
+   FINAL
+========================================== */
+
+
+.ultima h1{
+
+
+    font-size:clamp(75px,12vw,130px);
+
+
+}
+
+
+
+.ultima p{
+
+
+    font-size:24px;
+
+
+}
+
+
+
+
+
+
+
+
+/* ==========================================
+   IPHONE
+========================================== */
+
+
+@media(max-width:768px){
+
+
+section{
+
+padding:25px 15px;
+
+}
+
+
+
+.subtitulo{
+
+font-size:14px;
+
+letter-spacing:3px;
+
+}
+
+
+
+.tarjeta{
+
+border-radius:25px;
+
+padding:35px 25px;
+
+}
+
+
+
+button,
+#ubicacion{
+
+
+width:90%;
+
+max-width:350px;
+
+font-size:16px;
+
+}
+
+
+
+#foto{
+
+
+max-height:60vh;
+
+border-radius:20px;
+
+}
+
+
+
+#textoFoto{
+
+font-size:19px;
+
+}
+
+
+}
